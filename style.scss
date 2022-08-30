@@ -1,0 +1,30 @@
+$color-primary:#9356dc;
+$color-secondary:#ff79da;
+$color-tertiary:#99e2d0;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+    header {
+        font-family: 'Shrikhand', cursive;
+        text-align: center;
+        font-size: 1.1rem;
+       
+        .search-bar {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: #cbcbcb;
+        }
+        .search-bar input {
+          border: none;
+          background-color: #cbcbcb;
+        }
+        input::placeholder {
+          color: black;
+          text-align: center;
+        }
+        
+      }
