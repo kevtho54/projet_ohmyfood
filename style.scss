@@ -1,13 +1,14 @@
+/* variable */
 $color-primary:#9356dc;
 $color-secondary:#ff79da;
 $color-tertiary:#99e2d0;
 
+/* mixin */
  @mixin font-roboto {font-family: 'Roboto', sans-serif;}
  @mixin box-shadow {
   box-shadow: 1px 1px 6px 0px grey;
  }
-
-
+/* font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
@@ -18,7 +19,7 @@ html {
   box-sizing: border-box;
  
 }
-
+   /* header */
     header {
         font-family: 'Shrikhand', cursive;
         text-align: center;
@@ -30,6 +31,7 @@ html {
         }
        
       }
+      /* search-bar */
       .search-bar {
         display: flex;
         justify-content: center;
@@ -51,6 +53,7 @@ html {
         color: #6b6b6b;
         padding-left: 20px;
       }
+      /*section reservation */
       .reservation {
         @include font-roboto;
         background-color: #f5f5f5;
@@ -80,9 +83,10 @@ html {
           border-radius: 50px;
           background: linear-gradient( 356deg, $color-primary, $color-secondary);
           color: white;
-        @include box-shadow;
+          @include box-shadow;
         }
       }
+      /* section fonctioning */
       .fonctionnement {
         @include font-roboto;
 
@@ -98,8 +102,7 @@ html {
           flex-direction: column;
           align-items: center;
           margin-right: 8%;
-          
-          
+        
           .restau, .menu, .degustez {
             @include box-shadow;
             width: 400px;
@@ -108,17 +111,15 @@ html {
             justify-content: space-around;
              border-radius: 20px;
              margin-right: 5px;
-             background-color: #f6f6f6;
-            
+             background-color: #f6f6f6; 
           }
+
           ol{
           list-style-type: none;
           display: flex;
           flex-direction: column;
           gap: 30px;
-        
-        }
-         
+        } 
         & li {
           position: relative;
           
@@ -137,17 +138,14 @@ html {
           position: absolute;
           left: -10px; 
       }
+      p {
+        margin-right: 80px;
+      }
+      /* icone */
       .svg-inline--fa {
         color: gray;
         margin-left: 30px;
       }
-      p {
-        margin-right: 80px;
-
-       
-      }
-      
-      
         }
       }
     }
