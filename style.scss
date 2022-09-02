@@ -2,29 +2,152 @@ $color-primary:#9356dc;
 $color-secondary:#ff79da;
 $color-tertiary:#99e2d0;
 
+ @mixin font-roboto {font-family: 'Roboto', sans-serif;}
+ @mixin box-shadow {
+  box-shadow: 1px 1px 6px 0px grey;
+ }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+html {
+  min-width: 430px;
+}
+* {
+  box-sizing: border-box;
+ 
+}
 
     header {
         font-family: 'Shrikhand', cursive;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1rem;
+
+        h1{
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
        
-        .search-bar {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          background-color: #cbcbcb;
-        }
-        .search-bar input {
-          border: none;
-          background-color: #cbcbcb;
-        }
-        input::placeholder {
-          color: black;
-          text-align: center;
-        }
-        
       }
+      .search-bar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        padding-left: 80px;
+        background: linear-gradient(180deg, #cbcbcb 1%, #eaeaea 12%);
+        font-size: 20px;
+      
+      }
+  
+      .search-bar input {
+        border: none;
+        width: 100%;
+      }
+      input::placeholder {
+        @include font-roboto;
+        color: #6b6b6b;
+        padding-left: 20px;
+      }
+      .reservation {
+        @include font-roboto;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+        
+        h2{
+          width: 70%;
+          font-size: 1.6rem;
+          margin-top: 50px;
+          margin-bottom:0px;
+        }
+
+        p{
+          font-size: 1.4rem;
+          margin-top: 20px;
+          color: #6b6b6b;
+        }
+        button {
+          width: 50%;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border: none;
+          border-radius: 50px;
+          background: linear-gradient( 356deg, $color-primary, $color-secondary);
+          color: white;
+        @include box-shadow;
+        }
+      }
+      .fonctionnement {
+        @include font-roboto;
+
+        h3{
+          margin-left: 30px;
+          margin-top: 30px;
+          font-size: 1.5rem;
+        }
+ 
+        .btn_fonctionnement {
+          counter-reset: list;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 8%;
+          
+          
+          .restau, .menu, .degustez {
+            @include box-shadow;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+             border-radius: 20px;
+             margin-right: 5px;
+             background-color: #f6f6f6;
+            
+          }
+          ol{
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        
+        }
+         
+        & li {
+          position: relative;
+          
+        &::before{
+          content:counter(list);
+          counter-increment: list;
+          background-color:$color-primary;
+          color: white;
+          font-size: 10px;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          left: -10px; 
+      }
+      .svg-inline--fa {
+        color: gray;
+        margin-left: 30px;
+      }
+      p {
+        margin-right: 80px;
+
+       
+      }
+      
+      
+        }
+      }
+    }
