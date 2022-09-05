@@ -1,6 +1,3 @@
-/* variable */
-/* mixin */
-/* font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
@@ -88,6 +85,14 @@ input::placeholder {
   color: white;
   box-shadow: 1px 1px 6px 0px grey;
 }
+.reservation button:hover {
+  background-color: #eddeff;
+  opacity: 0.8;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
 
 /* section fonctioning */
 .fonctionnement {
@@ -111,9 +116,9 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 20px;
   margin-right: 5px;
   background-color: #f6f6f6;
+  border-radius: 20px;
 }
 .fonctionnement .btn_fonctionnement ol {
   list-style-type: none;
@@ -121,9 +126,21 @@ input::placeholder {
   flex-direction: column;
   gap: 30px;
 }
+.fonctionnement .btn_fonctionnement ol button {
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+}
+.fonctionnement .btn_fonctionnement ol li:hover {
+  background-color: #eddeff;
+  opacity: 0.8;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
 .fonctionnement .btn_fonctionnement li {
   position: relative;
-  /* icone */
 }
 .fonctionnement .btn_fonctionnement li::before {
   content: counter(list);
@@ -143,7 +160,7 @@ input::placeholder {
 .fonctionnement .btn_fonctionnement li p {
   margin-right: 80px;
 }
-.fonctionnement .btn_fonctionnement li .svg-inline--fa {
+.fonctionnement .btn_fonctionnement .svg-inline--fa {
   color: gray;
   margin-left: 30px;
 }/*# sourceMappingURL=style.css.map */
