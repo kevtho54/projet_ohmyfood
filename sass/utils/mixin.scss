@@ -1,0 +1,16 @@
+@mixin hover {
+  background-color: #d6b7fc;
+  color: black;
+  opacity: 0.8;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+@mixin box-shadow {
+  box-shadow: 1px 1px 6px 0px grey;
+}
