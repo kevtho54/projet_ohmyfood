@@ -1,0 +1,29 @@
+/* footer*/
+@use "../utils/mixin.scss";
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+  & h2 {
+    font-size: 1.7rem;
+    font-family: "Shrikhand", cursive;
+    padding-top: 30px;
+  }
+  & p {
+    @include mixin.font-roboto;
+    font-size: 1.3rem;
+    margin-top: 3px;
+    & i {
+      margin-right: 5px;
+    }
+  }
+  & a {
+    @include mixin.font-roboto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+  }
+}
