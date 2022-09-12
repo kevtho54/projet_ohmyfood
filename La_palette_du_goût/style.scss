@@ -1,7 +1,14 @@
 @use "../sass/utils/mixin.scss";
+@use "../sass/utils/variable.scss" as v;
+@use "../sass/layout/footer.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
+html {
+  min-width: 450px;
+  margin: 0;
+  width: 100%;
+}
 * {
   box-sizing: border-box;
 }
@@ -33,8 +40,10 @@ header {
 
 .menu {
   position: relative;
+  background-color: #f2f2f2;
+
   img {
-    width: 100%;
+    width: 99.5%;
     object-fit: cover;
     height: 350px;
   }
@@ -43,15 +52,17 @@ header {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 250px;
+    top: 252px;
     background-color: white;
     width: 100%;
     height: 100px;
+    border: none;
     border-radius: 50px 50px 0px 0px;
-
+    background-color: #f2f2f2;
+    margin-left: -1px;
     h2 {
       font-family: "Shrikhand", cursive;
-      font-size: 1.6rem;
+      font-size: 2rem;
       margin-left: 15px;
     }
   }
@@ -62,7 +73,11 @@ header {
   .fa-regular:hover {
     transition-duration: 4s;
     transition-property: margin-right, color;
-    background-image: linear-gradient(356deg, #9356dc, #ff79da);
+    background-image: linear-gradient(
+      356deg,
+      v.$color-primary,
+      v.$color-secondary
+    );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -84,18 +99,102 @@ header {
     width: 11%;
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
+    margin: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
   }
   p {
+    margin: 0px;
+    padding: 5px 10px 10px 10px;
+  }
+  .fricassee {
     display: flex;
-    justify-content: space-between;
     font-weight: lighter;
-    font-size: 1.3rem;
-    margin-top: -25px;
-    span {
-      margin-right: 20px;
-      font-weight: bold;
+    font-size: 1.2rem;
+    overflow: hidden;
+
+    .prix_check {
+      display: flex;
+      margin-left: auto;
+      margin-right: -51px;
+      background-color: blue;
+      .prix,
+      .check {
+        display: flex;
+        align-items: flex-end;
+        background-color: red;
+        margin: 0px;
+      }
+      .prix {
+        padding-right: 20px;
+      }
+      .check {
+        width: 50px;
+        background-color: v.$color-tertiary;
+      }
     }
+    &:hover .prix_check {
+      margin-right: 0;
+    }
+  }
+  .fricassee,
+  .foie_gras,
+  .oeuf,
+  .filet_de_boeuf,
+  .parmentier,
+  .filet_de_turbot,
+  .paris_brest,
+  .mousse,
+  .macaron {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    margin-right: 6%;
+    background-color: white;
+    padding: 1px;
+    padding-left: 15px;
+  }
+  button {
+    @include mixin.button;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    p {
+      padding-left: 50px;
+      margin: auto;
+    }
+  }
+  button:hover {
+    @include mixin.hover;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+  & h2 {
+    font-size: 1.7rem;
+    font-family: "Shrikhand", cursive;
+    padding-top: 0px;
+  }
+  & p {
+    @include mixin.font-roboto;
+    font-size: 1.3rem;
+    margin-top: 3px;
+    & i {
+      margin-right: 5px;
+    }
+  }
+  & a {
+    @include mixin.font-roboto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
   }
 }

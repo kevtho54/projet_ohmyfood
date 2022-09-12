@@ -1,5 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*@mixin heart {
+  transition-duration: 4s;
+  transition-property: margin-right, color;
+  background-image: linear-gradient(356deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+*/
+/* footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 30px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+html {
+  min-width: 450px;
+  margin: 0;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -31,9 +76,10 @@ header .logo_title .fa-solid {
 
 .menu {
   position: relative;
+  background-color: #f2f2f2;
 }
 .menu img {
-  width: 100%;
+  width: 99.5%;
   object-fit: cover;
   height: 350px;
 }
@@ -42,15 +88,18 @@ header .logo_title .fa-solid {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 250px;
+  top: 252px;
   background-color: white;
   width: 100%;
   height: 100px;
+  border: none;
   border-radius: 50px 50px 0px 0px;
+  background-color: #f2f2f2;
+  margin-left: -1px;
 }
 .menu .logo_title h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-left: 15px;
 }
 .menu .fa-regular {
@@ -82,19 +131,116 @@ header .logo_title .fa-solid {
   width: 11%;
 }
 .repas h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 .repas p {
-  display: flex;
-  justify-content: space-between;
-  font-weight: lighter;
-  font-size: 1.3rem;
-  margin-top: -25px;
+  margin: 0px;
+  padding: 5px 10px 10px 10px;
 }
-.repas p span {
-  margin-right: 20px;
-  font-weight: bold;
+.repas .fricassee {
+  display: flex;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+.repas .fricassee .prix_check {
+  display: flex;
+  margin-left: auto;
+  margin-right: -51px;
+  background-color: blue;
+}
+.repas .fricassee .prix_check .prix,
+.repas .fricassee .prix_check .check {
+  display: flex;
+  align-items: flex-end;
+  background-color: red;
+  margin: 0px;
+}
+.repas .fricassee .prix_check .prix {
+  padding-right: 20px;
+}
+.repas .fricassee .prix_check .check {
+  width: 50px;
+  background-color: #99e2d0;
+}
+.repas .fricassee:hover .prix_check {
+  margin-right: 0;
+}
+.repas .fricassee,
+.repas .foie_gras,
+.repas .oeuf,
+.repas .filet_de_boeuf,
+.repas .parmentier,
+.repas .filet_de_turbot,
+.repas .paris_brest,
+.repas .mousse,
+.repas .macaron {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  margin-right: 6%;
+  background-color: white;
+  padding: 1px;
+  padding-left: 15px;
+}
+.repas button {
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(356deg, #9356dc, #ff79da);
+  color: white;
+  box-shadow: 1px 1px 6px 0px grey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.repas button p {
+  padding-left: 50px;
+  margin: auto;
+}
+.repas button:hover {
+  background-color: #d6b7fc;
+  color: black;
+  opacity: 0.8;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 0px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
