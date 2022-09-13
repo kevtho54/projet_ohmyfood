@@ -39,6 +39,14 @@ footer a {
   margin-bottom: 20px;
 }
 
+@keyframes menu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html {
   min-width: 450px;
   margin: 0;
@@ -152,6 +160,17 @@ header .logo_title .fa-solid {
   font-weight: lighter;
   font-size: 1.2rem;
   overflow: hidden;
+  animation: menu 2s;
+  animation-fill-mode: both;
+}
+.repas .menu:nth-child(1) {
+  animation-delay: 100ms;
+}
+.repas .menu:nth-child(2) {
+  animation-delay: 200ms;
+}
+.repas .menu:nth-child(3) {
+  animation-delay: 300ms;
 }
 .repas .menu .description_menu {
   text-overflow: ellipsis;
@@ -187,6 +206,14 @@ header .logo_title .fa-solid {
 }
 .repas .menu:hover i {
   animation: fa-check 1s ease-in-out;
+}
+@keyframes fa-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    rotate: 0;
+  }
 }
 .repas .menu .fa-check {
   border-radius: 50%;
