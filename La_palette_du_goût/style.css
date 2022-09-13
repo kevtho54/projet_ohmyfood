@@ -131,6 +131,9 @@ header .logo_title .fa-solid {
   width: 11%;
 }
 .repas h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 1.3rem;
   font-weight: 500;
   margin: 0px;
@@ -138,47 +141,61 @@ header .logo_title .fa-solid {
   padding-top: 10px;
 }
 .repas p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   margin: 0px;
   padding: 5px 10px 10px 10px;
 }
-.repas .fricassee {
+.repas .menu {
   display: flex;
   font-weight: lighter;
   font-size: 1.2rem;
   overflow: hidden;
 }
-.repas .fricassee .prix_check {
+.repas .menu .description_menu {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.repas .menu .prix_check {
   display: flex;
   margin-left: auto;
-  margin-right: -51px;
-  background-color: blue;
+  margin-right: -91px;
+  transition: all 1s;
+  border-radius: 0px 20px 20px 0px;
 }
-.repas .fricassee .prix_check .prix,
-.repas .fricassee .prix_check .check {
+.repas .menu .prix_check .prix,
+.repas .menu .prix_check .check {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   display: flex;
   align-items: flex-end;
-  background-color: red;
   margin: 0px;
 }
-.repas .fricassee .prix_check .prix {
+.repas .menu .prix_check .prix {
   padding-right: 20px;
 }
-.repas .fricassee .prix_check .check {
-  width: 50px;
+.repas .menu .prix_check .check {
+  width: 90px;
   background-color: #99e2d0;
-}
-.repas .fricassee:hover .prix_check {
   margin-right: 0;
 }
-.repas .fricassee,
-.repas .foie_gras,
-.repas .oeuf,
-.repas .filet_de_boeuf,
-.repas .parmentier,
-.repas .filet_de_turbot,
-.repas .paris_brest,
-.repas .mousse,
-.repas .macaron {
+.repas .menu:hover .prix_check {
+  margin-right: 0;
+}
+.repas .menu:hover i {
+  animation: fa-check 1s ease-in-out;
+}
+.repas .menu .fa-check {
+  border-radius: 50%;
+  padding: 7px;
+  margin: auto;
+  background-color: white;
+  color: #99e2d0;
+}
+.repas .menu {
   border-radius: 20px;
   margin-bottom: 20px;
   margin-left: 1%;
@@ -201,9 +218,11 @@ header .logo_title .fa-solid {
   margin-top: 30px;
   margin-bottom: 40px;
 }
-.repas button p {
-  padding-left: 50px;
+.repas button .button {
+  padding-left: 0px;
   margin: auto;
+  font-size: 1rem;
+  padding: 0;
 }
 .repas button:hover {
   background-color: #d6b7fc;

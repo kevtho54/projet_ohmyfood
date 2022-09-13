@@ -1,7 +1,8 @@
 @use "../sass/utils/mixin.scss";
 @use "../sass/utils/variable.scss" as v;
 @use "../sass/layout/footer.scss";
-
+@use "../sass/utils/animations.scss";
+@use "../sass/pages/La_palette_du_gout.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
@@ -12,6 +13,7 @@ html {
 * {
   box-sizing: border-box;
 }
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -99,6 +101,9 @@ header {
     width: 11%;
   }
   h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 1.3rem;
     font-weight: 500;
     margin: 0px;
@@ -106,48 +111,66 @@ header {
     padding-top: 10px;
   }
   p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     margin: 0px;
     padding: 5px 10px 10px 10px;
   }
-  .fricassee {
+  .menu {
     display: flex;
     font-weight: lighter;
     font-size: 1.2rem;
     overflow: hidden;
 
+    .description_menu {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
     .prix_check {
       display: flex;
       margin-left: auto;
-      margin-right: -51px;
-      background-color: blue;
+      margin-right: -91px;
+      transition: all 1s;
+      border-radius: 0px 20px 20px 0px;
       .prix,
       .check {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         display: flex;
         align-items: flex-end;
-        background-color: red;
         margin: 0px;
       }
       .prix {
         padding-right: 20px;
       }
       .check {
-        width: 50px;
+        width: 90px;
         background-color: v.$color-tertiary;
+        margin-right: 0;
       }
     }
-    &:hover .prix_check {
-      margin-right: 0;
+    &:hover {
+      .prix_check {
+        margin-right: 0;
+      }
+      i {
+        animation: fa-check 1s ease-in-out;
+      }
+    }
+
+    .fa-check {
+      border-radius: 50%;
+      padding: 7px;
+      margin: auto;
+      background-color: white;
+      color: v.$color-tertiary;
     }
   }
-  .fricassee,
-  .foie_gras,
-  .oeuf,
-  .filet_de_boeuf,
-  .parmentier,
-  .filet_de_turbot,
-  .paris_brest,
-  .mousse,
-  .macaron {
+  .menu {
     border-radius: 20px;
     margin-bottom: 20px;
     margin-left: 1%;
@@ -162,9 +185,11 @@ header {
     margin-right: auto;
     margin-top: 30px;
     margin-bottom: 40px;
-    p {
-      padding-left: 50px;
+    .button {
+      padding-left: 0px;
       margin: auto;
+      font-size: 1rem;
+      padding: 0;
     }
   }
   button:hover {
