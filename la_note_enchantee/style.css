@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 30px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@keyframes menu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+html {
+  /*min-width: 450px;*/
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 100%;
+}
+header .logo_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+header .logo_title .logo {
+  color: black;
+  font-size: 30px;
+}
+header .logo_title .fa-solid {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+}
+
+.menu {
+  position: relative;
+  background-color: #f2f2f2;
+}
+.menu img {
+  width: 99.5%;
+  object-fit: cover;
+  height: 350px;
+}
+.menu .logo_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 252px;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #f2f2f2;
+  margin-left: -1px;
+}
+.menu .logo_title h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  margin-left: 15px;
+}
+.menu .fa-regular {
+  font-size: 35px;
+  margin-right: 30px;
+}
+.menu .fa-regular:hover {
+  transition-duration: 4s;
+  transition-property: margin-right, color;
+  background-image: linear-gradient(356deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.repas {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.repas h3 {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  border-bottom: 4px solid #99e2d0;
+  width: 11%;
+}
+.repas h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.repas p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 5px 10px 10px 10px;
+}
+.repas .menu {
+  animation: menu 2s;
+  animation-fill-mode: both;
+  display: flex;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+.repas .menu:nth-child(1) {
+  animation-delay: 800ms;
+}
+.repas .menu:nth-child(2) {
+  animation-delay: 1600ms;
+}
+.repas .menu:nth-child(3) {
+  animation-delay: 2400ms;
+}
+.repas .menu:nth-child(4) {
+  animation-delay: 3200ms;
+}
+.repas .menu .description_menu {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.repas .menu .prix_check {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-left: auto;
+  margin-right: -91px;
+  transition: all 1s;
+  border-radius: 0px 20px 20px 0px;
+}
+.repas .menu .prix_check .prix,
+.repas .menu .prix_check .check {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+  margin: 0px;
+}
+.repas .menu .prix_check .prix {
+  padding-right: 20px;
+}
+.repas .menu .prix_check .check {
+  width: 90px;
+  background-color: #99e2d0;
+  margin-right: 0;
+}
+.repas .menu:hover .prix_check {
+  margin-right: 0;
+}
+.repas .menu:hover i {
+  animation: fa-check 1s ease-in-out;
+}
+@keyframes fa-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    rotate: 0;
+  }
+}
+.repas .menu .fa-check {
+  border-radius: 50%;
+  padding: 7px;
+  margin: auto;
+  background-color: white;
+  color: #99e2d0;
+}
+.repas .menu {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  margin-right: 6%;
+  background-color: white;
+  padding: 1px;
+  padding-left: 15px;
+}
+.repas button {
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(356deg, #9356dc, #ff79da);
+  color: white;
+  box-shadow: 1px 1px 6px 0px grey;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.repas button .button {
+  padding-left: 0px;
+  margin: auto;
+  font-size: 1rem;
+  padding: 0;
+}
+.repas button:hover {
+  opacity: 0.7;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 0px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
