@@ -2,13 +2,12 @@
 @use "../sass/utils/variable.scss" as v;
 @use "../sass/layout/footer.scss";
 @use "../sass/utils/animations.scss";
-@use "../sass/pages/La_palette_du_gout.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
   min-width: 450px;
   margin: 0;
-  width: 100%;
+  padding: 0;
 }
 * {
   box-sizing: border-box;
@@ -118,18 +117,18 @@ header {
   }
 
   .menu {
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
       &:nth-child(#{$i}) {
-        animation-delay: 100ms * $i;
+        animation-delay: 800ms * $i;
       }
     }
+    animation: menu 2s;
+    animation-fill-mode: both;
 
     display: flex;
     font-weight: lighter;
     font-size: 1.2rem;
     overflow: hidden;
-    animation: menu 2s;
-    animation-fill-mode: both;
     .description_menu {
       text-overflow: ellipsis;
       overflow: hidden;
@@ -137,6 +136,9 @@ header {
     }
 
     .prix_check {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
       display: flex;
       margin-left: auto;
       margin-right: -91px;

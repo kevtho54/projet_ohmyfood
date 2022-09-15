@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-/*@mixin heart {
-  transition-duration: 4s;
-  transition-property: margin-right, color;
-  background-image: linear-gradient(356deg, #9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-*/
 /* footer*/
 footer {
   display: flex;
@@ -156,21 +146,21 @@ header .logo_title .fa-solid {
   padding: 5px 10px 10px 10px;
 }
 .repas .menu {
+  animation: menu 2s;
+  animation-fill-mode: both;
   display: flex;
   font-weight: lighter;
   font-size: 1.2rem;
   overflow: hidden;
-  animation: menu 2s;
-  animation-fill-mode: both;
 }
 .repas .menu:nth-child(1) {
-  animation-delay: 100ms;
+  animation-delay: 800ms;
 }
 .repas .menu:nth-child(2) {
-  animation-delay: 200ms;
+  animation-delay: 1600ms;
 }
 .repas .menu:nth-child(3) {
-  animation-delay: 300ms;
+  animation-delay: 2400ms;
 }
 .repas .menu .description_menu {
   text-overflow: ellipsis;
@@ -252,9 +242,7 @@ header .logo_title .fa-solid {
   padding: 0;
 }
 .repas button:hover {
-  background-color: #d6b7fc;
-  color: black;
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 16px 20px -5px gray;
   transition: 350ms;
   border: none;

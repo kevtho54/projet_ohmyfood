@@ -7,7 +7,7 @@
 html {
   min-width: 450px;
   margin: 0;
-  padding: 0;
+  width: 100%;
 }
 * {
   box-sizing: border-box;
@@ -117,7 +117,7 @@ header {
   }
 
   .menu {
-    @for $i from 1 through 4 {
+    @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
         animation-delay: 800ms * $i;
       }
@@ -136,9 +136,6 @@ header {
     }
 
     .prix_check {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
       display: flex;
       margin-left: auto;
       margin-right: -91px;
