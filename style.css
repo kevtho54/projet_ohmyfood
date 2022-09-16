@@ -159,8 +159,10 @@ input::placeholder {
 /* Section restaurant*/
 .restaurant {
   font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
 }
 .restaurant h2 {
+  padding-top: 20px;
   margin-left: 30px;
 }
 .restaurant h3 {
@@ -183,10 +185,12 @@ input::placeholder {
 .restaurant .card {
   border-radius: 20px;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 4%;
+  margin-right: 6%;
   margin-bottom: 20px;
   position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 6px 0px grey;
 }
 .restaurant .card a {
   text-decoration: none;
@@ -225,6 +229,38 @@ input::placeholder {
   margin-left: 20px;
 }
 
+@media only screen and (max-width: 3500px) and (min-width: 992px) {
+  .reservation button {
+    width: 23%;
+  }
+  .fonctionnement .btn_fonctionnement {
+    margin-right: 2%;
+  }
+  .restaurant h2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .restaurant .full_card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+  }
+  .restaurant .card {
+    width: 30%;
+    margin-left: auto;
+    margin-right: 11%;
+    margin-bottom: 3%;
+  }
+  footer h2 {
+    margin-top: 0px;
+  }
+  .footer_p {
+    display: flex;
+    gap: 85px;
+  }
+}
 /* footer*/
 footer {
   display: flex;
