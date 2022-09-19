@@ -189,22 +189,22 @@ header {
     padding: 1px;
     padding-left: 15px;
   }
-  button {
-    @include mixin.button;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    .button {
-      padding-left: 0px;
-      margin: auto;
-      font-size: 1rem;
-      padding: 0;
-    }
+}
+button {
+  @include mixin.button;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  .button {
+    padding-left: 0px;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0;
   }
-  button:hover {
-    @include mixin.hover;
-  }
+}
+button:hover {
+  @include mixin.hover;
 }
 footer {
   display: flex;
@@ -231,5 +231,35 @@ footer {
     text-decoration: none;
     color: white;
     margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+  button {
+    width: 30%;
+    margin-left: 35%;
+  }
+}
+@media only screen and (max-width: 3500px) and (min-width: 992px) {
+  .repas {
+    /*display: flex;
+    /* flex-direction: row;
+    margin-left: 6%;*/
+    /*.menu {
+      /*margin-bottom: 40px;
+      width: 100%;
+    }*/
+  }
+
+  button {
+    width: 30%;
+    margin-left: 35%;
+  }
+  footer h2 {
+    margin-top: 10px;
+  }
+  .footer_p {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
   }
 }

@@ -37,6 +37,14 @@ footer a {
     transform: scale(1);
   }
 }
+@keyframes loading_finish {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 html {
   min-width: 450px;
   margin: 0;
@@ -224,10 +232,10 @@ header .logo_title .fa-solid {
   margin-left: 1%;
   margin-right: 6%;
   background-color: white;
-  padding: 1px;
   padding-left: 15px;
 }
-.repas button {
+
+button {
   width: 50%;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -241,13 +249,14 @@ header .logo_title .fa-solid {
   margin-top: 30px;
   margin-bottom: 40px;
 }
-.repas button .button {
+button .button {
   padding-left: 0px;
   margin: auto;
   font-size: 1rem;
   padding: 0;
 }
-.repas button:hover {
+
+button:hover {
   opacity: 0.7;
   box-shadow: 0px 16px 20px -5px gray;
   transition: 350ms;
@@ -281,6 +290,36 @@ footer a {
   text-decoration: none;
   color: white;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+  button {
+    width: 30%;
+    margin-left: 35%;
+  }
+}
+@media only screen and (max-width: 3500px) and (min-width: 992px) {
+  .repas {
+    /*display: flex;
+    /* flex-direction: row;
+    margin-left: 6%;*/
+    /*.menu {
+      /*margin-bottom: 40px;
+      width: 100%;
+    }*/
+  }
+  button {
+    width: 30%;
+    margin-left: 35%;
+  }
+  footer h2 {
+    margin-top: 0px;
+  }
+  .footer_p {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
