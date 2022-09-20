@@ -117,7 +117,7 @@ header {
   }
 
   .menu {
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
       &:nth-child(#{$i}) {
         animation-delay: 800ms * $i;
       }
@@ -154,6 +154,7 @@ header {
       }
       .prix {
         padding-right: 20px;
+        font-weight: 500;
       }
       .check {
         width: 90px;
@@ -242,13 +243,20 @@ footer {
 }
 @media only screen and (max-width: 3500px) and (min-width: 992px) {
   .repas {
-    /*display: flex;
-    /* flex-direction: row;
-    margin-left: 6%;*/
-    /*.menu {
-      /*margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    .menu {
+      margin-bottom: 40px;
+    }
+    .entree,
+    .plats {
+      width: 48.5%;
+    }
+    .desserts {
       width: 100%;
-    }*/
+    }
   }
 
   button {
@@ -260,7 +268,8 @@ footer {
   }
   .footer_p {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 10px;
+    margin-right: 4%;
   }
 }

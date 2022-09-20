@@ -48,7 +48,7 @@ footer a {
 html {
   min-width: 450px;
   margin: 0;
-  padding: 0;
+  width: 100%;
 }
 
 * {
@@ -199,6 +199,7 @@ header .logo_title .fa-solid {
 }
 .repas .menu .prix_check .prix {
   padding-right: 20px;
+  font-weight: 500;
 }
 .repas .menu .prix_check .check {
   width: 90px;
@@ -232,6 +233,9 @@ header .logo_title .fa-solid {
   margin-left: 1%;
   margin-right: 6%;
   background-color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   padding-left: 15px;
 }
 
@@ -244,10 +248,9 @@ button {
   background: linear-gradient(356deg, #9356dc, #ff79da);
   color: white;
   box-shadow: 1px 1px 6px 0px grey;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 30px;
   margin-bottom: 40px;
+  margin-left: 25%;
 }
 button .button {
   padding-left: 0px;
@@ -300,25 +303,33 @@ footer a {
 }
 @media only screen and (max-width: 3500px) and (min-width: 992px) {
   .repas {
-    /*display: flex;
-    /* flex-direction: row;
-    margin-left: 6%;*/
-    /*.menu {
-      /*margin-bottom: 40px;
-      width: 100%;
-    }*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .repas .menu {
+    margin-bottom: 40px;
+  }
+  .repas .entree,
+.repas .plats {
+    width: 48.5%;
+  }
+  .repas .desserts {
+    width: 100%;
   }
   button {
     width: 30%;
     margin-left: 35%;
   }
   footer h2 {
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .footer_p {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 10px;
+    margin-right: 4%;
   }
 }
 

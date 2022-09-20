@@ -7,7 +7,7 @@
 html {
   min-width: 450px;
   margin: 0;
-  padding: 0;
+  width: 100%;
 }
 * {
   box-sizing: border-box;
@@ -124,7 +124,6 @@ header {
     }
     animation: menu 2s;
     animation-fill-mode: both;
-
     display: flex;
     font-weight: lighter;
     font-size: 1.2rem;
@@ -155,6 +154,7 @@ header {
       }
       .prix {
         padding-right: 20px;
+        font-weight: 500;
       }
       .check {
         width: 90px;
@@ -186,15 +186,18 @@ header {
     margin-left: 1%;
     margin-right: 6%;
     background-color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
     padding-left: 15px;
   }
 }
 button {
   @include mixin.button;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 30px;
   margin-bottom: 40px;
+  margin-left: 25%;
   .button {
     padding-left: 0px;
     margin: auto;
@@ -240,13 +243,20 @@ footer {
 }
 @media only screen and (max-width: 3500px) and (min-width: 992px) {
   .repas {
-    /*display: flex;
-    /* flex-direction: row;
-    margin-left: 6%;*/
-    /*.menu {
-      /*margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    .menu {
+      margin-bottom: 40px;
+    }
+    .entree,
+    .plats {
+      width: 48.5%;
+    }
+    .desserts {
       width: 100%;
-    }*/
+    }
   }
 
   button {
@@ -258,7 +268,8 @@ footer {
   }
   .footer_p {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 10px;
+    margin-right: 4%;
   }
 }

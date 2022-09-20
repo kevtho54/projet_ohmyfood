@@ -2,6 +2,8 @@
 html {
   min-width: 500px;
   width: 100%;
+  border: 2px solid red;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
