@@ -4,13 +4,12 @@
 @use "../sass/utils/animations.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-html {
-  min-width: 450px;
-  margin: 0;
-  width: 100%;
-}
+
 * {
   box-sizing: border-box;
+}
+body {
+  min-width: 340px;
 }
 
 header {
@@ -117,7 +116,7 @@ header {
   }
 
   .menu {
-    @for $i from 1 through 4 {
+    @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
         animation-delay: 800ms * $i;
       }
@@ -233,6 +232,19 @@ footer {
     text-decoration: none;
     color: white;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .repas {
+    .menu {
+      margin-left: -2%;
+      margin-right: 0;
+      width: 97%;
+      font-size: 1rem;
+      h4 {
+        font-size: 1rem;
+      }
+    }
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 769px) {

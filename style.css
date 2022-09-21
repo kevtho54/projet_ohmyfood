@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* base page d'accueil*/
-html {
-  min-width: 500px;
-  width: 100%;
-  overflow-x: hidden;
-}
-
 * {
   box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-width: 340px;
 }
 
 /*header page d'accueil*/
@@ -105,18 +104,20 @@ input::placeholder {
 .fonctionnement .btn_fonctionnement .menu,
 .fonctionnement .btn_fonctionnement .degustez {
   box-shadow: 1px 1px 6px 0px grey;
-  width: 440px;
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-right: 5px;
   background-color: #f6f6f6;
   border-radius: 20px;
 }
 .fonctionnement .btn_fonctionnement ol {
+  width: 440px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 .fonctionnement .btn_fonctionnement ol button {
@@ -150,7 +151,11 @@ input::placeholder {
   left: -10px;
 }
 .fonctionnement .btn_fonctionnement li p {
-  margin-right: 80px;
+  margin-right: 60px;
+}
+.fonctionnement .btn_fonctionnement .fa-solid {
+  padding-left: 20px;
+  padding-right: 10px;
 }
 .fonctionnement .btn_fonctionnement .svg-inline--fa {
   color: gray;
@@ -186,7 +191,7 @@ input::placeholder {
 .restaurant .card {
   border-radius: 20px;
   width: 90%;
-  margin-left: 4%;
+  margin-left: 5%;
   margin-right: 6%;
   margin-bottom: 20px;
   position: relative;
@@ -261,6 +266,14 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-right: 4%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .reservation button {
+    width: 60%;
+  }
+  .fonctionnement .btn_fonctionnement ol {
+    width: 380px;
   }
 }
 /* footer*/
