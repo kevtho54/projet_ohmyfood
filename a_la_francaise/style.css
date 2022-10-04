@@ -29,12 +29,29 @@ footer a {
   margin-bottom: 20px;
 }
 
+@-webkit-keyframes menu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes menu {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes loading_finish {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes loading_finish {
@@ -84,7 +101,8 @@ header .logo_title .fa-solid {
 }
 .menu img {
   width: 99.5%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 350px;
 }
 .menu .logo_title {
@@ -106,18 +124,27 @@ header .logo_title .fa-solid {
   font-size: 2rem;
   margin-left: 15px;
 }
-.menu .fa-regular {
+.menu .logo {
+  position: relative;
+}
+.menu .fa-regular,
+.menu .fa-solid {
   font-size: 35px;
   margin-right: 30px;
 }
-.menu .fa-regular:hover {
-  transition-duration: 4s;
-  transition-property: margin-right, color;
+.menu .fa-solid {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
   background-image: linear-gradient(356deg, #9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-weight: bold;
+  transition: all 1.5s ease-in-out;
+}
+.menu .fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .repas {
@@ -152,32 +179,40 @@ header .logo_title .fa-solid {
   padding: 5px 10px 10px 10px;
 }
 .repas .menu {
-  animation: menu 2s;
-  animation-fill-mode: both;
+  -webkit-animation: menu 2s;
+          animation: menu 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   display: flex;
   font-weight: lighter;
   font-size: 1.2rem;
   overflow: hidden;
 }
 .repas .menu:nth-child(1) {
-  animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 .repas .menu:nth-child(2) {
-  animation-delay: 1600ms;
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
 }
 .repas .menu:nth-child(3) {
-  animation-delay: 2400ms;
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
 }
 .repas .menu:nth-child(4) {
-  animation-delay: 3200ms;
+  -webkit-animation-delay: 3200ms;
+          animation-delay: 3200ms;
 }
 .repas .menu:nth-child(5) {
-  animation-delay: 4000ms;
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
 }
 .repas .menu .description_menu {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
 }
 .repas .menu .prix_check {
   text-overflow: ellipsis;
@@ -185,7 +220,7 @@ header .logo_title .fa-solid {
   white-space: nowrap;
   display: flex;
   margin-left: auto;
-  margin-right: -91px;
+  margin-right: -127px;
   transition: all 1s;
   border-radius: 0px 20px 20px 0px;
 }
@@ -201,9 +236,10 @@ header .logo_title .fa-solid {
 .repas .menu .prix_check .prix {
   padding-right: 20px;
   font-weight: 500;
+  margin-right: 10px;
 }
 .repas .menu .prix_check .check {
-  width: 90px;
+  width: 130px;
   background-color: #99e2d0;
   margin-right: 0;
 }
@@ -211,7 +247,16 @@ header .logo_title .fa-solid {
   margin-right: 0;
 }
 .repas .menu:hover i {
-  animation: fa-check 1s ease-in-out;
+  -webkit-animation: fa-check 1s ease-in-out;
+          animation: fa-check 1s ease-in-out;
+}
+@-webkit-keyframes fa-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    rotate: 0;
+  }
 }
 @keyframes fa-check {
   0% {
@@ -343,6 +388,4 @@ footer a {
     margin-bottom: 10px;
     margin-right: 4%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

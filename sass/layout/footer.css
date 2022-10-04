@@ -1,0 +1,28 @@
+/* footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 30px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=footer.css.map */
