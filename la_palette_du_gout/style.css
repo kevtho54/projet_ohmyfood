@@ -298,12 +298,6 @@ button {
   margin-bottom: 40px;
   margin-left: 25%;
 }
-button .button {
-  padding-left: 0px;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0;
-}
 
 button:hover {
   opacity: 0.7;
@@ -376,8 +370,9 @@ footer a {
     width: 100%;
   }
   button {
-    width: 30%;
-    margin-left: 35%;
+    width: 25%;
+    margin-left: 37%;
+    font-size: 1.3rem;
   }
   footer h2 {
     margin-top: 0px;

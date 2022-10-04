@@ -263,7 +263,7 @@ header .logo_title .fa-solid {
     transform: rotate(-270deg);
   }
   100% {
-    rotate: 0;
+   transform: rotate(0deg);
   }
 }
 .repas .menu .fa-check {
@@ -297,12 +297,6 @@ button {
   margin-top: 30px;
   margin-bottom: 40px;
   margin-left: 25%;
-}
-button .button {
-  padding-left: 0px;
-  margin: auto;
-  font-size: 1rem;
-  padding: 0;
 }
 
 button:hover {
@@ -376,8 +370,9 @@ footer a {
     width: 100%;
   }
   button {
-    width: 30%;
-    margin-left: 35%;
+    width: 25%;
+    margin-left: 37%;
+    font-size: 1.3rem;
   }
   footer h2 {
     margin-top: 0px;

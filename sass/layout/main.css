@@ -202,11 +202,6 @@ input::placeholder {
 .restaurant .card .title_icon {
   margin-left: 20px;
   position: relative;
-  /*.fa-regular,
-  .fa-solid {
-    font-size: 35px;
-    margin-right: 30px;
-  }*/
 }
 .restaurant .card .title_icon .fa-regular,
 .restaurant .card .title_icon .fa-solid {
