@@ -1,13 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-/* base page d'accueil*/
-* {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes menu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading_finish {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.load {
+  background-color: rgba(255, 255, 255, 0.959);
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  animation: loading_finish 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
-body {
-  width: 100%;
-  min-width: 340px;
+.progress {
+  width: 211.2px;
+  height: 38.7px;
+  border-radius: 35.2px;
+  color: #ff79da;
+  border: 3.5px solid;
+  position: relative;
+  top: 450px;
+  margin: auto;
+  z-index: 2;
+}
+.progress p {
+  font-family: "Shrikhand", cursive;
+  position: absolute;
+  top: -100px;
+  font-size: 2.4rem;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.progress::before {
+  content: "";
+  position: absolute;
+  margin: 3.5px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: progress-pf82op 1.6s infinite;
+}
+
+@keyframes progress-pf82op {
+  100% {
+    inset: 0;
+  }
+}
+/* footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 30px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
 }
 
 /*header page d'accueil*/
@@ -19,6 +103,321 @@ header {
 header h1 {
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 340px;
+}
+
+header {
+  /*font-family: "Shrikhand", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 100%;*/
+}
+header .logo_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+header .logo_title .logo {
+  color: black;
+  font-size: 30px;
+}
+header .logo_title .fa-solid {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.menu {
+  position: relative;
+  background-color: #f2f2f2;
+}
+.menu img {
+  width: 99.5%;
+  object-fit: cover;
+  height: 350px;
+}
+.menu .logo_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 252px;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #f2f2f2;
+  margin-left: -1px;
+}
+.menu .logo_title h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  margin-left: 15px;
+}
+.menu .logo {
+  position: relative;
+}
+.menu .fa-regular,
+.menu .fa-solid {
+  font-size: 35px;
+  margin-right: 30px;
+}
+.menu .fa-solid {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  background-image: linear-gradient(356deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 1.5s ease-in-out;
+}
+.menu .fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.repas {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.repas h3 {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  border-bottom: 4px solid #99e2d0;
+  width: 11%;
+}
+.repas h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.repas p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 5px 10px 10px 10px;
+}
+.repas .menu {
+  animation: menu 2s;
+  animation-fill-mode: both;
+  display: flex;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+.repas .menu:nth-child(1) {
+  animation-delay: 800ms;
+}
+.repas .menu:nth-child(2) {
+  animation-delay: 1600ms;
+}
+.repas .menu:nth-child(3) {
+  animation-delay: 2400ms;
+}
+.repas .menu:nth-child(4) {
+  animation-delay: 3200ms;
+}
+.repas .menu:nth-child(5) {
+  animation-delay: 4000ms;
+}
+.repas .menu .description_menu {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.repas .menu .prix_check {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-left: auto;
+  margin-right: -127px;
+  transition: all 1s;
+  border-radius: 0px 20px 20px 0px;
+}
+.repas .menu .prix_check .prix,
+.repas .menu .prix_check .check {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+  margin: 0px;
+}
+.repas .menu .prix_check .prix {
+  padding-right: 20px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.repas .menu .prix_check .check {
+  width: 130px;
+  background-color: #99e2d0;
+  margin-right: 0;
+}
+.repas .menu:hover .prix_check {
+  margin-right: 0;
+}
+.repas .menu:hover i {
+  animation: fa-check 1s ease-in-out;
+}
+@keyframes fa-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.repas .menu .fa-check {
+  border-radius: 50%;
+  padding: 7px;
+  margin: auto;
+  background-color: white;
+  color: #99e2d0;
+}
+.repas .menu {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  margin-right: 6%;
+  background-color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 15px;
+}
+
+#btn {
+  width: 45%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(356deg, #9356dc, #ff79da);
+  color: white;
+  box-shadow: 1px 1px 6px 0px grey;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 25%;
+}
+
+button:hover {
+  opacity: 0.7;
+  box-shadow: 0px 16px 20px -5px gray;
+  transition: 350ms;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding-left: 30px;
+}
+footer h2 {
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
+  padding-top: 0px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3px;
+}
+footer p i {
+  margin-right: 5px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .repas .menu {
+    margin-left: -2%;
+    margin-right: 0;
+    width: 97%;
+    font-size: 1rem;
+  }
+  .repas .menu h4 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+  #btn {
+    width: 30%;
+    margin-left: 35%;
+  }
+}
+@media only screen and (max-width: 3500px) and (min-width: 992px) {
+  .repas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .repas .menu {
+    margin-bottom: 40px;
+  }
+  .repas .entree,
+.repas .plats {
+    width: 48.5%;
+  }
+  .repas .desserts {
+    width: 100%;
+  }
+  #btn {
+    width: 25%;
+    margin-left: 37%;
+    font-size: 1.3rem;
+  }
+  footer h2 {
+    margin-top: 0px;
+  }
+  .footer_p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-right: 4%;
+  }
+}
+/* base page d'accueil*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-width: 340px;
 }
 
 /* search-bar */
@@ -67,7 +466,7 @@ input::placeholder {
   color: #6b6b6b;
 }
 .reservation button {
-  width: 50%;
+  width: 45%;
   padding-top: 15px;
   padding-bottom: 15px;
   border: none;
@@ -214,11 +613,6 @@ input::placeholder {
 .restaurant .card .title_icon {
   margin-left: 20px;
   position: relative;
-  /*.fa-regular,
-  .fa-solid {
-    font-size: 35px;
-    margin-right: 30px;
-  }*/
 }
 .restaurant .card .title_icon .fa-regular,
 .restaurant .card .title_icon .fa-solid {
@@ -283,98 +677,6 @@ input::placeholder {
   }
   .fonctionnement .btn_fonctionnement ol {
     width: 380px;
-  }
-}
-/* footer*/
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #353535;
-  color: white;
-  padding-left: 30px;
-}
-footer h2 {
-  font-size: 1.7rem;
-  font-family: "Shrikhand", cursive;
-  padding-top: 30px;
-}
-footer p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  margin-top: 3px;
-}
-footer p i {
-  margin-right: 5px;
-}
-footer a {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: white;
-  margin-bottom: 20px;
-}
-
-@keyframes menu {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes loading_finish {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-.load {
-  background-color: rgba(255, 255, 255, 0.959);
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  animation: loading_finish 3s;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
-}
-
-.progress {
-  width: 211.2px;
-  height: 38.7px;
-  border-radius: 35.2px;
-  color: #ff79da;
-  border: 3.5px solid;
-  position: relative;
-  top: 450px;
-  margin: auto;
-  z-index: 2;
-}
-.progress p {
-  font-family: "Shrikhand", cursive;
-  position: absolute;
-  top: -100px;
-  font-size: 2.4rem;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.progress::before {
-  content: "";
-  position: absolute;
-  margin: 3.5px;
-  inset: 0 100% 0 0;
-  border-radius: inherit;
-  background: currentColor;
-  animation: progress-pf82op 1.6s infinite;
-}
-
-@keyframes progress-pf82op {
-  100% {
-    inset: 0;
   }
 }
 
